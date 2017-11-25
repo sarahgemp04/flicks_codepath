@@ -8,7 +8,6 @@
 
 import UIKit
 import AlamofireImage
-import Alamofire
 
 class MovieCell: UITableViewCell {
 
@@ -29,6 +28,7 @@ class MovieCell: UITableViewCell {
         overviewLabel.text = movie["overview"] as? String
         
         let posterPathString = movie["poster_path"] as! String
+       
         let baseURL = "https://image.tmdb.org/t/p/w500"
         posterImageURL = URL(string: baseURL + posterPathString)
         
